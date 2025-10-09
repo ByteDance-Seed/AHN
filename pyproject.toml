@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=67", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ahn"
+version = "0.1.0"
+description = "Artificial Hippocampus Network"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "Yunhao Fang", email = "seerkfang@gmail.com" },
+    { name = "Weihao Yu", email = "weihaoyu6@gmail.com" }
+]
+dependencies = []  # keep core deps here
+
+[project.optional-dependencies]
+# Everything needed to train
+train = [
+  "tensorflow==2.18.0",
+  "tf-keras==2.18.0",
+  "deepspeed==0.16.2",
+  "numpy==1.26.4",
+  "datasets==3.6.0",
+  "transformers==4.51.0",
+  "liger-kernel"
+]
+
+# Everything needed to eval
+eval = [
+  "fuzzywuzzy",
+  "jieba",
+  "rouge"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["ahn*"]
+namespaces = true
