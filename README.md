@@ -5,13 +5,13 @@
 # AHN: Artificial Hippocampus Networks for Efficient Long-Context Modeling
 
 <p align="center">
-<a href="https://arxiv.org/pdf/2510.xxxxx" alt="arXiv">
-    <img src="https://img.shields.io/badge/arXiv-2510.xxxxx-b31b1b.svg?style=flat" /></a>
+<a href="https://arxiv.org/abs/2510.07318" alt="arXiv">
+    <img src="https://img.shields.io/badge/arXiv-2510.07318-b31b1b.svg?style=flat" /></a>
 <a href="https://huggingface.co/collections/ByteDance-Seed/ahn-68e6130d08ed0f5a1b622829" alt="Hugging Face Models">
     <img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-blue" /></a>
 </p>
 
-This repo provides training, inference, and evaluation instructions for the paper AHN "[Artificial Hippocampus Networks for Efficient Long-Context Modeling](https://arxiv.org/pdf/2510.xxxxx)".
+This repo provides training, inference, and evaluation instructions for the paper AHN "[Artificial Hippocampus Networks for Efficient Long-Context Modeling](https://arxiv.org/abs/2510.07318)".
 
 ## :bell: News
 
@@ -168,7 +168,7 @@ For full evaluation details, please the [evaluation instructions](eval/README.md
 @article{fang2025artificial,
   title={Artificial hippocampus networks for efficient long-context modeling},
   author={Fang, Yunhao and Yu, Weihao and Zhong, Shu and Ye, Qinghao and Xiong, Xuehan and Wei, Lai},
-  journal={arXiv preprint arXiv:2510.xxxxx},
+  journal={arXiv preprint arXiv:2510.07318},
   year={2025}
 }
 ```
