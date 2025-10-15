@@ -62,15 +62,15 @@ pip install -e ".[train]"
 ### Model Zoo
 | base model | AHN module | #params | checkpoint (AHN only) |
 |:---:|:---:| :---:|:---:|
-| Qwen2.5-3B-Instruct | Mamba2 | 119M | [🤗model](https://huggingface.co/ByteDance-Seed/AHN-Mamba2-for-Qwen-2.5-Instruct-3B) |
-| Qwen2.5-3B-Instruct | DeltaNet | 118M | [🤗model](https://huggingface.co/ByteDance-Seed/AHN-DN-for-Qwen-2.5-Instruct-3B) |
-| Qwen2.5-3B-Instruct | GatedDeltaNet | 130M | [🤗model](https://huggingface.co/ByteDance-Seed/AHN-GDN-for-Qwen-2.5-Instruct-3B) |
-| Qwen2.5-7B-Instruct | Mamba2 | 186M | [🤗model](https://huggingface.co/ByteDance-Seed/AHN-Mamba2-for-Qwen-2.5-Instruct-7B) |
-| Qwen2.5-7B-Instruct | DeltaNet | 185M | [🤗model](https://huggingface.co/ByteDance-Seed/AHN-DN-for-Qwen-2.5-Instruct-7B) |
-| Qwen2.5-7B-Instruct | GatedDeltaNet | 213M | [🤗model](https://huggingface.co/ByteDance-Seed/AHN-GDN-for-Qwen-2.5-Instruct-7B) |
-| Qwen2.5-14B-Instruct | Mamba2 | 514M | [🤗model](https://huggingface.co/ByteDance-Seed/AHN-Mamba2-for-Qwen-2.5-Instruct-14B) |
-| Qwen2.5-14B-Instruct | DeltaNet | 511M | [🤗model](https://huggingface.co/ByteDance-Seed/AHN-DN-for-Qwen-2.5-Instruct-14B) |
-| Qwen2.5-14B-Instruct | GatedDeltaNet | 610M | [🤗model](https://huggingface.co/ByteDance-Seed/AHN-GDN-for-Qwen-2.5-Instruct-14B) |
+| Qwen2.5-3B-Instruct | Mamba2 | 11.9M | [🤗model](https://huggingface.co/ByteDance-Seed/AHN-Mamba2-for-Qwen-2.5-Instruct-3B) |
+| Qwen2.5-3B-Instruct | DeltaNet | 11.8M | [🤗model](https://huggingface.co/ByteDance-Seed/AHN-DN-for-Qwen-2.5-Instruct-3B) |
+| Qwen2.5-3B-Instruct | GatedDeltaNet | 13.0M | [🤗model](https://huggingface.co/ByteDance-Seed/AHN-GDN-for-Qwen-2.5-Instruct-3B) |
+| Qwen2.5-7B-Instruct | Mamba2 | 18.6M | [🤗model](https://huggingface.co/ByteDance-Seed/AHN-Mamba2-for-Qwen-2.5-Instruct-7B) |
+| Qwen2.5-7B-Instruct | DeltaNet | 18.5M | [🤗model](https://huggingface.co/ByteDance-Seed/AHN-DN-for-Qwen-2.5-Instruct-7B) |
+| Qwen2.5-7B-Instruct | GatedDeltaNet | 21.3M | [🤗model](https://huggingface.co/ByteDance-Seed/AHN-GDN-for-Qwen-2.5-Instruct-7B) |
+| Qwen2.5-14B-Instruct | Mamba2 | 51.4M | [🤗model](https://huggingface.co/ByteDance-Seed/AHN-Mamba2-for-Qwen-2.5-Instruct-14B) |
+| Qwen2.5-14B-Instruct | DeltaNet | 51.1M | [🤗model](https://huggingface.co/ByteDance-Seed/AHN-DN-for-Qwen-2.5-Instruct-14B) |
+| Qwen2.5-14B-Instruct | GatedDeltaNet | 61.0M | [🤗model](https://huggingface.co/ByteDance-Seed/AHN-GDN-for-Qwen-2.5-Instruct-14B) |
 
 ### Inference
 1. Merge base model and AHN weights. Example: Qwen2.5-3B-Instruct with GatedDeltaNet
@@ -135,7 +135,7 @@ Key arguments:
   - Options: `True`, `False`
 
 - `--filter_len`  
-  - Filter training data by sequence length (e.g., keep samples shorter than `288`)
+  - Filter training data by sequence length (e.g., keep samples longer than the length, `288`)
 
 - `--cutoff_len`  
   - Set the cutoff sequence length (e.g., `24576`)
@@ -175,5 +175,5 @@ For full evaluation details, please the [evaluation instructions](eval/README.md
 
 ## Acknowledgments
 
-We thank Shi Guang, Haoqi Fan, Tianle Cai, Deyao Zhu, Tenglong Ao, Ge Zhang, Wenhao Huang, and Liang Xiang for valuable discussions.
+We thank Shi Guang, Haoqi Fan, Tianle Cai, Deyao Zhu, Tenglong Ao, Shilong Liu, Ge Zhang, Wenhao Huang, and Liang Xiang for valuable discussions.
 We would like to thank the developers of [🤗 transformers](https://github.com/huggingface/transformers), [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory), [flash-linear-attention](https://github.com/Seerkfang/flash-linear-attention) and [mamba](https://github.com/state-spaces/mamba) for their open-source contributions that made this project possible.
